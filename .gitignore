@@ -1,0 +1,19 @@
+#generales
+# Dependencias y compilados
+node_modules/
+dist/
+
+#reportes
+coverage/
+test-results/
+playwright-report/
+artifacts
+
+# Logs y entorno
+*.log
+
+# Playwright
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
