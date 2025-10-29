@@ -6,9 +6,17 @@
   "type": "module",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm rum clean && tsc -p tsconfig.json",
-    "dev": "tsx playground/clase01/taller01.ts",
-    "test": "echo \"Prueba de script\" && exit 1"
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "dev": "tsx playground/clase1/taller1.ts",
+    "taller2": "tsx playground/clase2/index.ts",
+    "test": "echo \"Prueba de script\" && exit 1",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "lint:ci": "eslint . --max-warnings=0",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "validate": "npm run format:check && npm run lint:ci",
+    "tarea01": "tsx playground/tarea01/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.38.0",
+    "@playwright/test": "^1.56.1",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^16.4.0",
