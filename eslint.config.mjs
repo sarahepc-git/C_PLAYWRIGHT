@@ -11,24 +11,20 @@ export default defineConfig([
       "dist/**",
       "reports/**",
       "artifacts/**",
-      "playwright-report/**",
-      "test-results/**",
-      "eslint.config.mjs",
+      "eslint.config.mjs"
     ],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
     files: ["**/*.ts"],
-    languageOptions: {
-      sourceType: "module",
-      globals: { ...globals.node, ...globals.browser },
+    languageOptions: { 
+      sourceTyoe:"module",
+      globals: { ...globals.browser, ...globals.node } 
     },
-    rules: {
-      "no-console": "off",
-      "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-unused-vars": "off",
-    },
+    rules:{
+      'no-console': "off",
+    }
   },
-  eslintConfigPrettier,
+  eslintConfigPrettier
 ]);
