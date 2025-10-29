@@ -10,6 +10,8 @@
     "clean": "rimraf dist",
     "build": "npm run clean && tsc -p tsconfig.json",
     "dev": "tsx playground/clase1/taller1.ts",
+    "taller2": "tsx playground/clase2/index.ts",
+    "tarea1": "tsx playground/tarea1/index.ts",
     "test": "echo \"Prueba de script\" && exit 1",
 
     "typecheck": "tsc --noEmit",
