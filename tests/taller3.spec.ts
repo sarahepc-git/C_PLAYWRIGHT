@@ -46,6 +46,15 @@ test.describe("Acciones todos", () =>{
           // Completar todos
           await page.click(".todo-list li:first-child .toggle");
           await page.click(".todo-list li:last-child .toggle");
+          //
+          const firstElement = await page.locator(".todo-list li .toggle")
+          
+          const numberElements = await firstElement.count();
+
+          if (numberElements === 3)
+
+          await firstElement.first().click();
+
           // Filtrar
           await page.click(".filters li:nth-child(3) a");
           
